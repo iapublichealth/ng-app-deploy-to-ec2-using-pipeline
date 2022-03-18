@@ -2,7 +2,6 @@ version: 0.2
 env:
   variables:
     APP_ID: "idb"
-    GH_BRANCH: ${CURRENT_BRANCH}
 phases:
   install:
     commands:
@@ -19,7 +18,7 @@ phases:
       # - echo testing...
       # - echo building...
       - echo APP_ID is ${APP_ID}
-      - echo GH_BRANCH is ${GH_BRANCH}
+      - echo GH_BRANCH is ${CURRENT_BRANCH}
       - ng build --prod
   post_build:
     commands:
