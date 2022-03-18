@@ -19,6 +19,8 @@ phases:
       # - echo building...
       - echo APP_ID is ${APP_ID}
       - echo GH_BRANCH is ${CURRENT_BRANCH}
+      - echo ${CODEBUILD_SOURCE_VERSION}
+      - echo ${SourceVariables.BranchName}
       - ng build --prod
   post_build:
     commands:
