@@ -18,8 +18,7 @@ phases:
       # - echo testing...
       # - echo building...
       - echo APP_ID is ${APP_ID}
-      - echo GH_BRANCH is ${CURRENT_BRANCH}
-      - echo ${CODEBUILD_WEBHOOK_HEAD_REF}
+      - echo GH_BRANCH is ${BRANCH_NAME}
       # - ng build --prod
   post_build:
     commands:
