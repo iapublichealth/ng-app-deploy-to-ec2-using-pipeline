@@ -18,8 +18,8 @@ phases:
     commands:
       # - echo testing...
       # - echo building...
-      - echo "APP_ID is $APP_ID"
-      - echo "GH_BRANCH is $GH_BRANCH"
+      - echo APP_ID is ${APP_ID}
+      - echo GH_BRANCH is ${GH_BRANCH}
       - ng build --prod
   post_build:
     commands:
