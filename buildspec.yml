@@ -5,25 +5,25 @@ env:
 phases:
   install:
     commands:
-      # - echo installing nodejs...
-      # - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-      # - apt-get install -y nodejs  #aws code build use ubuntu environement
+      - echo installing nodejs...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt-get install -y nodejs  #aws code build use ubuntu environement
   pre_build:
     commands:
-      # - echo installing dependencies...
-      # - npm i -g @angular/cli
-      # - npm install
+      - echo installing dependencies...
+      - npm i -g @angular/cli
+      - npm install
   build:
     commands:
       # - echo testing...
       # - echo building...
       - echo APP_ID is ${APP_ID}
       - echo GH_BRANCH is ${BRANCH_NAME}
-      # - ng build --prod
+      - ng build --prod
   post_build:
     commands:
-      # - mv appspec.yml ./dist/my-dream-app
-      # - mv scripts ./dist/my-dream-app
+      - mv appspec.yml ./dist/my-dream-app
+      - mv scripts ./dist/my-dream-app
 artifacts:
   files:
     - "**/*"
